@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Broker extends Model
 {
     protected $fillable = [
-        'name', 'phone', 'phone2', 'id_number', 'address', 'notes', 'status',
+        'name', 'phone', 'phone2', 'id_number', 'nationality', 'address', 'notes', 'status', 'type',
     ];
 
     public function listings(): HasMany

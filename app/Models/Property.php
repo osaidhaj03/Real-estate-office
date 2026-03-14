@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Property extends Model
 {
     protected $fillable = [
-        'property_type_id', 'owner_id', 'title', 'status', 'price', 'area',
+        'property_type_id', 'owner_id', 'title', 'is_mortgaged', 'area',
         'location', 'address', 'description', 'notes',
         // حقول المباني
         'bedrooms', 'bathrooms', 'floor', 'building_age', 'furnished', 'direction',
@@ -18,7 +18,7 @@ class Property extends Model
     ];
 
     protected $casts = [
-        'price' => 'decimal:2',
+        'is_mortgaged' => 'boolean',
         'area' => 'decimal:2',
         'street_width' => 'decimal:2',
         'furnished' => 'boolean',
